@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A powerful English search engine that combines results from Google and DuckDuckGo">
+    <meta name="keywords" content="search engine, google, duckduckgo, web search, english search">
+    <meta name="author" content="Your Name">
+    <title>My Search Engine - English Web Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="sr-only">My Search Engine</h1>
+    </header>
+    
+    <main>
+        <div class="search-container">
+            <input 
+                type="text" 
+                class="search-box" 
+                placeholder="SEARCH THE WEB..." 
+                aria-label="Search the web"
+                autocomplete="off"
+            >
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter" class="filter-select" aria-label="Filter by content type">
+                        <option value="any">Any type</option>
+                        <option value="article">Articles</option>
+                        <option value="video">Videos</option>
+                        <option value="image">Images</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="results-container" aria-live="polite">
+            <!-- Loading indicator will be inserted here -->
+            <div class="loading-indicator" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Searching...</p>
+            </div>
+            
+            <!-- Error message will be inserted here -->
+            <div class="error-message" style="display: none;" role="alert">
+                <h2>Error</h2>
+                <p>There was an error fetching search results. Please try again later.</p>
+            </div>
+            
+            <!-- Welcome message -->
+            <div class="result-item welcome-message">
+                <div class="result-title">Welcome to My Search Engine</div>
+                <div class="result-url">www.mysearchengine.com</div>
+                <div class="result-description">Start typing to search across Google and DuckDuckGo in English.</div>
+            </div>
+            
+            <!-- Search results will be inserted here -->
+            <div class="search-results"></div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Powered by Google and DuckDuckGo with help of Crazy_kb user</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
